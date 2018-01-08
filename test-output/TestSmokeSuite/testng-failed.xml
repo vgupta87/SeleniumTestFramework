@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [TestSmokeSuite]">
+  <listeners>
+    <listener class-name="com.listener.ExtentReporterNG"/>
+    <listener class-name="com.listener.RetryListener"/>
+  </listeners>
+  <test name="SmokeTest(failed)">
+    <classes>
+      <class name="TestClasses.HomePageTest">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="verifyLogoutfunctionality"/>
+          <include name="verifyUserGuideLink"/>
+          <include name="failedTestCase"/>
+          <include name="testMethodEnd"/>
+          <include name="navigateToURL"/>
+          <include name="afterTestMethod"/>
+        </methods>
+      </class> <!-- TestClasses.HomePageTest -->
+      <class name="TestClasses.LoginPageTest">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="test"/>
+          <include name="verifyLoginfunctionality"/>
+          <include name="testMethodEnd"/>
+          <include name="navigateToURL"/>
+          <include name="afterTestMethod"/>
+        </methods>
+      </class> <!-- TestClasses.LoginPageTest -->
+    </classes>
+  </test> <!-- SmokeTest(failed) -->
+</suite> <!-- Failed suite [TestSmokeSuite] -->
